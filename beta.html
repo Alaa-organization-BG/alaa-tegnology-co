@@ -78,12 +78,38 @@
         </div>
     </main>
 
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+
     <script>
-        document.getElementById('beta-form').onsubmit = (e) => {
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        document.getElementById('beta-form').onsubmit = async (e) => {
             e.preventDefault();
-            document.getElementById('beta-form').style.display = 'none';
-            document.getElementById('success-msg').style.display = 'block';
-            console.log("Beta signup submitted");
+            
+            const email = e.target.querySelector('input[type="email"]').value;
+            const role = e.target.querySelector('select').value;
+            const isDealer = document.getElementById('dealer-flag').checked;
+
+            try {
+                await db.collection('beta_signups').add({
+                    email: email,
+                    role: role,
+                    isDealer: isDealer,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                });
+
+                document.getElementById('beta-form').style.display = 'none';
+                document.getElementById('success-msg').style.display = 'block';
+                console.log("Beta signup saved to Firestore");
+            } catch (error) {
+                console.error("Error saving to Firestore:", error);
+                alert("Something went wrong. Please try again.");
+            }
         };
     </script>
 </body>
