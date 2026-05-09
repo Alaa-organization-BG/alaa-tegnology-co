@@ -38,21 +38,23 @@
 
     <nav class="container" style="padding: 20px 0; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;">
         <div class="logo" style="display: flex; align-items: center; gap: 15px;">
-            <img src="assets/logo.png" alt="Logo" style="height: 40px;">
-            <span style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800;">ALAA <span style="color: var(--accent-blue);">TEGNOLOGY</span> CO</span>
+            <img src="assets/branding/logo512.png" alt="Alaa Tegnology CO Logo" style="height: 50px; border-radius: 8px;">
+            <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800;">ALAA <span style="color: var(--accent-blue);">TEGNOLOGY</span> CO</span>
         </div>
         <div style="display: flex; gap: 20px; align-items: center;">
-            <button class="lang-toggle" onclick="toggleLanguage()">BG / EN</button>
-            <a href="beta.html" class="glass-card" style="padding: 10px 20px; text-decoration: none; background: var(--accent-blue); color: white; font-weight: 600; font-size: 0.9rem;">Join Beta</a>
+            <button class="lang-toggle" onclick="toggleLanguage()">Language: EN / BG / AR / DE</button>
+            <a href="beta.html" id="nav-cta" class="glass-card" style="padding: 10px 20px; text-decoration: none; background: var(--accent-blue); color: white; font-weight: 600; font-size: 0.9rem;">Get Early Access</a>
         </div>
     </nav>
 
     <header class="hero container">
-        <div class="glass-card" style="padding: 60px; text-align: center;">
-            <h1 id="hero-title">Alaa Tegnology CO — Future Tech for Automotive & AI</h1>
-            <p id="hero-subtitle" style="margin-top: 20px; font-size: 1.2rem; color: var(--text-secondary);">Building Koli.one — the smart and integrated vehicle marketplace for Bulgaria and the region. Join our beta phase now.</p>
-            <div style="margin-top: 40px;">
-                <a href="beta.html" class="glass-card" style="padding: 15px 40px; text-decoration: none; background: var(--accent-blue); color: white; font-weight: 700; font-size: 1.1rem; box-shadow: 0 0 20px var(--accent-glow);">Join Beta Now</a>
+        <div class="glass-card" style="padding: 60px; text-align: center; background-image: url('assets/branding/Copilot_20260409_030233.png'); background-size: cover; background-position: center; position: relative;">
+            <div style="background: rgba(0,0,0,0.7); padding: 40px; border-radius: 20px;">
+                <h1 id="hero-title">Alaa Tegnology CO — Future Tech for Automotive & AI</h1>
+                <p id="hero-subtitle" style="margin-top: 20px; font-size: 1.2rem; color: var(--text-secondary);">Building Koli.one — the smart and integrated vehicle marketplace for Bulgaria and the region. Join our beta phase now.</p>
+                <div style="margin-top: 40px;">
+                    <a href="beta.html" id="hero-cta" class="glass-card" style="padding: 15px 40px; text-decoration: none; background: var(--accent-blue); color: white; font-weight: 700; font-size: 1.1rem; box-shadow: 0 0 20px var(--accent-glow);">Get Early Access</a>
+                </div>
             </div>
         </div>
     </header>
@@ -62,7 +64,7 @@
             <div>
                 <h2 id="about-title">About the Founder</h2>
                 <p id="about-text" style="margin-top: 20px; font-size: 1.1rem; color: var(--text-secondary);">
-                    Alaa Al-Hamdani — Software Engineer and Founder. Born on January 8, 1983. With 14 years of expertise in network distribution and programming in Baghdad, followed by professional excellence in Germany since 2020. Now established in Sofia, Bulgaria, merging two decades of experience into cutting-edge technology solutions.
+                    Alaa Al-Hamdani — Software Engineer and Founder with 20 years of experience. 14 years in Baghdad specializing in network infrastructure and programming, and since 2020 leading web and app development in Germany. Currently based in Sofia, Bulgaria, merging global expertise into local innovation.
                 </p>
                 <div class="feature-grid" style="grid-template-columns: 1fr 1fr; margin-top: 30px;">
                     <div class="glass-card">
@@ -76,9 +78,9 @@
                 </div>
             </div>
             <div class="glass-card" style="text-align: center;">
-                <img src="assets/koli_mockup.png" alt="Koli.one Mockup" style="max-width: 100%; border-radius: 15px;">
+                <img src="assets/branding/Copilot_20260203_032031.png" alt="Koli.one Mascot" style="max-width: 100%; border-radius: 15px; background: white;">
                 <h3 style="margin-top: 20px;">Koli.one</h3>
-                <p style="color: var(--text-secondary);">Our Flagship Vehicle Marketplace</p>
+                <p style="color: var(--text-secondary);">Our Flagship AI-Driven Vehicle Marketplace</p>
             </div>
         </div>
     </section>
@@ -170,37 +172,67 @@
                 heroTitle: "Alaa Tegnology CO — Future Tech for Automotive & AI",
                 heroSubtitle: "Building Koli.one — the smart and integrated vehicle marketplace for Bulgaria and the region. Join our beta phase now.",
                 aboutTitle: "About the Founder",
-                aboutText: "Alaa Al-Hamdani — Software Engineer and Founder. Born on January 8, 1983. With 14 years of expertise in network distribution and programming in Baghdad, followed by professional excellence in Germany since 2020. Now established in Sofia, Bulgaria, merging two decades of experience into cutting-edge technology solutions.",
+                aboutText: "Alaa Al-Hamdani — Software Engineer and Founder with 20 years of experience. 14 years in Baghdad specializing in network infrastructure and programming, and since 2020 leading web and app development in Germany. Currently based in Sofia, Bulgaria, merging global expertise into local innovation.",
                 visionLabel: "Vision",
                 visionText: "Empowering the automotive market with AI and trusted digital products.",
                 missionLabel: "Mission",
                 missionText: "Building a transparent, secure, and easy-to-use platform for Bulgaria and beyond.",
                 servicesTitle: "Capabilities & Services",
-                whyTitle: "Why Alaa Tegnology?"
+                whyTitle: "Why Alaa Tegnology?",
+                cta: "Get Early Access"
             },
             bg: {
-                heroTitle: "Alaa Tegnology CO — Бوдещи технологии за автомобили и AI",
+                heroTitle: "Alaa Tegnology CO — Бъдещи технологии за автомобили и AI",
                 heroSubtitle: "Изграждаме Koli.one — интелигентният и интегриран пазар за превозни средства за България и региона. Присъединете се към бета фазата сега.",
                 aboutTitle: "За основателя",
-                aboutText: "Алаа Ал-Хамдани — софтуерен инженер и основател. Роден на 8 януари 1983 г. С 14-годишен опит в разпространението на мрежи и програмирането в Багдад, последван от професионални постижения в Германия от 2020 г. Сега установен в София, България.",
+                aboutText: "Алаа Ал-Хамдани — софтуерен инженер и основател с 20-годишен опит. 14 години в Багдад, специализиран в мрежова инфраструктура и програмиране, и от 2020 г. ръководещ разработката на уеб и приложения в Германия. Сега установен в София, България.",
                 visionLabel: "Визия",
                 visionText: "Овластяване на автомобилния пазар с AI и доверени дигитални продукти.",
                 missionLabel: "Мисия",
                 missionText: "Изграждане на прозрачна, сигурна и лесна за използване платформа за България и извън нея.",
                 servicesTitle: "Възможности и услуги",
-                whyTitle: "Защо Alaa Tegnology?"
+                whyTitle: "Защо Alaa Tegnology?",
+                cta: "Вземете ранен достъп"
+            },
+            ar: {
+                heroTitle: "علاء تكنولوجيا - تقنيات المستقبل للسيارات والذكاء الاصطناعي",
+                heroSubtitle: "نبني Koli.one — سوق السيارات الذكي والمتكامل لبلغاريا والمنطقة. انضم لمرحلة البيتا الآن.",
+                aboutTitle: "عن المؤسس",
+                aboutText: "علاء الحمداني — مهندس برمجيات ومؤسس بخبرة 20 عاماً. 14 سنة في بغداد متخصصاً في البنية التحتية للشبكات والبرمجة، ومنذ عام 2020 يقود تطوير الويب والتطبيقات في ألمانيا. مقيم حالياً في صوفيا، بلغاريا، حيث يدمج الخبرة العالمية في الابتكار المحلي.",
+                visionLabel: "الرؤية",
+                visionText: "تمكين سوق السيارات بالذكاء الاصطناعي والمنتجات الرقمية الموثوقة.",
+                missionLabel: "المهمة",
+                missionText: "بناء منصة شفافة، آمنة، وسهلة الاستخدام لبلغاريا وما وراءها.",
+                servicesTitle: "القدرات والخدمات",
+                whyTitle: "لماذا علاء تكنولوجيا؟",
+                cta: "احصل على وصول مبكر"
+            },
+            de: {
+                heroTitle: "Alaa Tegnology CO — Zukunftstechnologie für Automotive & KI",
+                heroSubtitle: "Wir bauen Koli.one — den smarten und integrierten Fahrzeugmarktplatz für Bulgarien und die Region. Werden Sie jetzt Teil unserer Beta-Phase.",
+                aboutTitle: "Über den Gründer",
+                aboutText: "Alaa Al-Hamdani — Software-Ingenieur und Gründer mit 20 Jahren Erfahrung. 14 Jahre in Bagdad spezialisiert auf Netzwerkinfrastruktur und Programmierung, und seit 2020 leitend in der Web- und App-Entwicklung in Deutschland. Derzeit in Sofia, Bulgarien, ansässig.",
+                visionLabel: "Vision",
+                visionText: "Stärkung des Automobilmarktes mit KI und vertrauenswürdigen digitalen Produkten.",
+                missionLabel: "Mission",
+                missionText: "Aufbau einer transparenten, sicheren und einfach zu bedienenden Plattform für Bulgarien und darüber hinaus.",
+                servicesTitle: "Fähigkeiten & Dienstleistungen",
+                whyTitle: "Warum Alaa Tegnology?",
+                cta: "Frühzeitiger Zugang"
             }
         };
 
-        let currentLang = 'en';
+        const langOrder = ['en', 'bg', 'ar', 'de'];
+        let currentLangIdx = 0;
 
         function toggleLanguage() {
-            currentLang = currentLang === 'en' ? 'bg' : 'en';
+            currentLangIdx = (currentLangIdx + 1) % langOrder.length;
             updateUI();
         }
 
         function updateUI() {
-            const t = translations[currentLang];
+            const lang = langOrder[currentLangIdx];
+            const t = translations[lang];
             document.getElementById('hero-title').innerText = t.heroTitle;
             document.getElementById('hero-subtitle').innerText = t.heroSubtitle;
             document.getElementById('about-title').innerText = t.aboutTitle;
@@ -211,7 +243,10 @@
             document.getElementById('mission-text').innerText = t.missionText;
             document.getElementById('services-title').innerText = t.servicesTitle;
             document.getElementById('why-title').innerText = t.whyTitle;
-            document.documentElement.lang = currentLang;
+            document.getElementById('nav-cta').innerText = t.cta;
+            document.getElementById('hero-cta').innerText = t.cta;
+            document.documentElement.lang = lang;
+            document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
         }
 
         // Initialize Firebase
