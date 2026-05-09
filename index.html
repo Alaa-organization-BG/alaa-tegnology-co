@@ -105,6 +105,19 @@
         </div>
     </footer>
 
+    <!-- Cookie Consent Modal (GDPR) -->
+    <div id="consent-modal" class="glass-card" style="position: fixed; bottom: 20px; left: 20px; right: 20px; z-index: 1000; display: none; padding: 20px; max-width: 500px;">
+        <h3>We value your privacy</h3>
+        <p style="font-size: 0.9rem; margin: 10px 0;">We use cookies to enhance your experience, analyze site traffic, and for marketing purposes.</p>
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <button onclick="acceptAll()" class="glass-card" style="background: var(--accent-blue); color: white; border: none; padding: 10px 20px; cursor: pointer; flex: 1;">Accept All</button>
+            <button onclick="acceptEssential()" class="glass-card" style="border: 1px solid var(--glass-border); padding: 10px 20px; cursor: pointer; flex: 1;">Essential Only</button>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 10px; text-align: center;">
+            Read our <a href="privacy.html" style="color: var(--accent-blue);">Privacy Policy</a>
+        </p>
+    </div>
+
     <script>
         // Interactive mouse movement for the background glow
         document.addEventListener('mousemove', (e) => {
@@ -113,6 +126,26 @@
             document.documentElement.style.setProperty('--mouse-x', `${x}%`);
             document.documentElement.style.setProperty('--mouse-y', `${y}%`);
         });
+
+        // Cookie Consent Logic
+        window.onload = () => {
+            if (!localStorage.getItem('cookie-consent')) {
+                document.getElementById('consent-modal').style.display = 'block';
+            }
+        };
+
+        function acceptAll() {
+            localStorage.setItem('cookie-consent', 'all');
+            document.getElementById('consent-modal').style.display = 'none';
+            // Initialize Sentry/PostHog here
+            console.log("All cookies accepted");
+        }
+
+        function acceptEssential() {
+            localStorage.setItem('cookie-consent', 'essential');
+            document.getElementById('consent-modal').style.display = 'none';
+            console.log("Essential cookies only");
+        }
     </script>
 </body>
 </html>
