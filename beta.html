@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Program | Koli.one & Alaa Tegnology CO</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .beta-form-container {
+            padding: 100px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        input, select {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            padding: 12px;
+            border-radius: 8px;
+            color: white;
+            font-family: inherit;
+        }
+        button {
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+
+    <nav class="container" style="padding: 20px 0;">
+        <a href="index.html" style="color: var(--text-primary); text-decoration: none; font-weight: 800;">← Back to Home</a>
+    </nav>
+
+    <main class="beta-form-container">
+        <div class="glass-card">
+            <h1 style="margin-bottom: 20px;">Join the Koli.one Beta</h1>
+            <p style="color: var(--text-secondary); margin-bottom: 40px;">Be among the first 200 users to experience the next generation of car marketplaces in Bulgaria.</p>
+            
+            <form id="beta-form">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="you@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Role</label>
+                    <select required>
+                        <option value="buyer">Buyer</option>
+                        <option value="seller">Private Seller</option>
+                        <option value="dealer">Car Dealer</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="flex-direction: row; align-items: center; gap: 10px;">
+                    <input type="checkbox" id="dealer-flag">
+                    <label for="dealer-flag">I represent a Car Dealership (Автокъща)</label>
+                </div>
+
+                <button type="submit">Request Beta Access</button>
+            </form>
+            
+            <div id="success-msg" style="display: none; margin-top: 20px; color: var(--neon-mint); text-align: center;">
+                ✓ Thank you! We'll contact you soon.
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('beta-form').onsubmit = (e) => {
+            e.preventDefault();
+            document.getElementById('beta-form').style.display = 'none';
+            document.getElementById('success-msg').style.display = 'block';
+            console.log("Beta signup submitted");
+        };
+    </script>
+</body>
+</html>
