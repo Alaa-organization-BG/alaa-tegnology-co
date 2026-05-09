@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alaa Tegnology CO | Professional Portfolio of Alaa Al-Hamdani</title>
-    <meta name="description" content="Portfolio of Alaa Al-Hamdani, founder of Alaa Tegnology CO. 20+ years of expertise in network distribution, web development, and AI. Creators of Koli One.">
+    <title>Alaa Tegnology CO | Future Tech for Automotive & AI</title>
+    <meta name="description" content="Alaa Tegnology CO - Building Koli.one, the smart vehicle marketplace for Bulgaria. Expert solutions in AI, Mobile Apps, and Firebase.">
+    <link rel="canonical" href="https://mobilbg.eu/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Alaa Tegnology CO | Future Tech">
+    <meta property="og:description" content="Building the future of automotive tech in Bulgaria. Join the Koli.one Beta.">
+    <meta property="og:image" content="assets/koli_mockup.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,95 +18,132 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="main.css">
+    <style>
+        .lang-toggle {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: 1px solid var(--glass-border);
+            border-radius: 5px;
+            background: var(--glass-bg);
+            color: var(--text-primary);
+        }
+        section { padding: 80px 0; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .service-card { padding: 30px; }
+        .service-card h3 { color: var(--accent-blue); margin-bottom: 15px; }
+    </style>
 </head>
 <body>
     <div class="grid-bg"></div>
 
-    <nav class="container" style="padding: 20px 0; display: flex; justify-content: space-between; align-items: center;">
+    <nav class="container" style="padding: 20px 0; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;">
         <div class="logo" style="display: flex; align-items: center; gap: 15px;">
-            <img src="assets/logo.png" alt="Alaa Tegnology CO Logo" style="height: 50px; border-radius: 8px;">
-            <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800;">ALAA <span style="color: var(--accent-blue);">TEGNOLOGY</span> CO</span>
+            <img src="assets/logo.png" alt="Logo" style="height: 40px;">
+            <span style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800;">ALAA <span style="color: var(--accent-blue);">TEGNOLOGY</span> CO</span>
         </div>
-        <div class="nav-links" style="display: flex; gap: 30px;">
-            <a href="#journey" style="color: var(--text-secondary); text-decoration: none;">Journey</a>
-            <a href="#projects" style="color: var(--text-secondary); text-decoration: none;">Projects</a>
-            <a href="#contact" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">Let's Talk</a>
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <button class="lang-toggle" onclick="toggleLanguage()">BG / EN</button>
+            <a href="beta.html" class="glass-card" style="padding: 10px 20px; text-decoration: none; background: var(--accent-blue); color: white; font-weight: 600; font-size: 0.9rem;">Join Beta</a>
         </div>
     </nav>
 
     <header class="hero container">
-        <div class="glass-card" style="padding: 60px;">
-            <h1 id="main-title">Building the Future of Tech in Bulgaria</h1>
-            <p>From the heart of Baghdad to the innovation hubs of Germany and Sofia. I am Alaa Al-Hamdani, an engineer dedicated to high-scale digital solutions.</p>
-            <div style="margin-top: 40px; display: flex; gap: 20px; justify-content: center;">
-                <a href="#projects" class="glass-card" style="padding: 15px 30px; text-decoration: none; background: var(--accent-blue); color: white; font-weight: 600;">View Koli One</a>
-                <a href="#journey" class="glass-card" style="padding: 15px 30px; text-decoration: none;">My Story</a>
+        <div class="glass-card" style="padding: 60px; text-align: center;">
+            <h1 id="hero-title">Alaa Tegnology CO — Future Tech for Automotive & AI</h1>
+            <p id="hero-subtitle" style="margin-top: 20px; font-size: 1.2rem; color: var(--text-secondary);">Building Koli.one — the smart and integrated vehicle marketplace for Bulgaria and the region. Join our beta phase now.</p>
+            <div style="margin-top: 40px;">
+                <a href="beta.html" class="glass-card" style="padding: 15px 40px; text-decoration: none; background: var(--accent-blue); color: white; font-weight: 700; font-size: 1.1rem; box-shadow: 0 0 20px var(--accent-glow);">Join Beta Now</a>
             </div>
         </div>
     </header>
 
-    <section id="journey" class="timeline container">
-        <h2 style="font-size: 2.5rem; margin-bottom: 60px; text-align: center;">The Evolution of an Engineer</h2>
-        
-        <div class="timeline-item">
-            <div class="timeline-year">2006 — 2020</div>
-            <div class="glass-card">
-                <h3>Baghdad: The Connectivity Pioneer</h3>
-                <p>14 years establishing internet distribution networks and general programming. Building the digital foundation in a challenging environment.</p>
+    <section id="about" class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+            <div>
+                <h2 id="about-title">About the Founder</h2>
+                <p id="about-text" style="margin-top: 20px; font-size: 1.1rem; color: var(--text-secondary);">
+                    Alaa Al-Hamdani — Software Engineer and Founder. Born on January 8, 1983. With 14 years of expertise in network distribution and programming in Baghdad, followed by professional excellence in Germany since 2020. Now established in Sofia, Bulgaria, merging two decades of experience into cutting-edge technology solutions.
+                </p>
+                <div class="feature-grid" style="grid-template-columns: 1fr 1fr; margin-top: 30px;">
+                    <div class="glass-card">
+                        <h4 id="vision-label">Vision</h4>
+                        <p id="vision-text" style="font-size: 0.9rem;">Empowering the automotive market with AI and trusted digital products.</p>
+                    </div>
+                    <div class="glass-card">
+                        <h4 id="mission-label">Mission</h4>
+                        <p id="mission-text" style="font-size: 0.9rem;">Building a transparent, secure, and easy-to-use platform for Bulgaria and beyond.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-year">2020 — 2024</div>
-            <div class="glass-card">
-                <h3>Germany: The Modern Architect</h3>
-                <p>Scaling expertise in web development and advanced software engineering. Mastering modern frameworks and cloud ecosystems.</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-year">2025 — Today</div>
-            <div class="glass-card">
-                <h3>Sofia: Alaa Tegnology CO</h3>
-                <p>Launching a high-end tech firm in Bulgaria. Merging AI, automotive technology, and premium web services.</p>
+            <div class="glass-card" style="text-align: center;">
+                <img src="assets/koli_mockup.png" alt="Koli.one Mockup" style="max-width: 100%; border-radius: 15px;">
+                <h3 style="margin-top: 20px;">Koli.one</h3>
+                <p style="color: var(--text-secondary);">Our Flagship Vehicle Marketplace</p>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="project-showcase container">
-        <h2 style="font-size: 2.5rem; margin-bottom: 60px; text-align: center;">Flagship Project</h2>
-        
-        <div class="koli-card glass-card">
-            <div class="project-info">
-                <span style="color: var(--neon-mint); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Automotive AI</span>
-                <h3 style="font-size: 3rem; margin: 10px 0;">Koli One</h3>
-                <p style="font-size: 1.2rem; margin-bottom: 30px;">The premier vehicle marketplace in Bulgaria. Built with React, Expo, and a custom AI-driven search engine.</p>
-                <ul style="list-style: none; margin-bottom: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                    <li>✓ Expo SDK 54</li>
-                    <li>✓ AI Router (Gemini)</li>
-                    <li>✓ Numeric ID System</li>
-                    <li>✓ High-Performance RTDB</li>
+    <section id="services" class="container" style="background: rgba(255,255,255,0.02); border-radius: 30px;">
+        <h2 style="text-align: center;" id="services-title">Capabilities & Services</h2>
+        <div class="feature-grid">
+            <div class="glass-card service-card">
+                <h3>Mobile Apps</h3>
+                <p>High-performance React Native & Expo applications for iOS and Android.</p>
+            </div>
+            <div class="glass-card service-card">
+                <h3>AI Solutions</h3>
+                <p>Custom AI Search, Price History prediction, and Smart Image recognition.</p>
+            </div>
+            <div class="glass-card service-card">
+                <h3>Cloud Infra</h3>
+                <p>Scalable Firebase & Google Cloud architectures for global reach.</p>
+            </div>
+            <div class="glass-card service-card">
+                <h3>GDPR Expert</h3>
+                <p>Strict European data protection compliance for all digital products.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="container">
+        <h2 style="text-align: center;" id="why-title">Why Alaa Tegnology?</h2>
+        <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div style="text-align: center;">
+                <h4 style="color: var(--neon-mint); font-size: 2rem;">20+</h4>
+                <p>Years of Engineering</p>
+            </div>
+            <div style="text-align: center;">
+                <h4 style="color: var(--accent-blue); font-size: 2rem;">AI-First</h4>
+                <p>Automotive Focus</p>
+            </div>
+            <div style="text-align: center;">
+                <h4 style="color: var(--accent-blue); font-size: 2rem;">Secure</h4>
+                <p>Privacy by Design</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" style="padding: 80px 0; background: var(--bg-secondary);">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
+            <div>
+                <h3 style="margin-bottom: 20px;">Alaa Tegnology CO</h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">Sofia, Bulgaria<br>mobilbg.eu</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 15px;">Legal</h4>
+                <ul style="list-style: none; font-size: 0.9rem;">
+                    <li><a href="privacy.html" style="color: var(--text-secondary); text-decoration: none;">Privacy Center</a></li>
+                    <li><a href="#" style="color: var(--text-secondary); text-decoration: none;">Terms of Service</a></li>
                 </ul>
-                <a href="https://koli.one" target="_blank" style="color: var(--accent-blue); font-weight: 800; text-decoration: none;">EXPLORE THE PLATFORM →</a>
             </div>
-            <div class="project-visual" style="flex: 1; text-align: center;">
-                <img src="assets/koli_mockup.png" alt="Koli One App Mockup" style="max-width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+            <div>
+                <h4 style="margin-bottom: 15px;">Contact</h4>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">contact@mobilbg.eu</p>
             </div>
         </div>
-    </section>
-
-    <footer id="contact" style="padding: 100px 0; background: var(--bg-secondary); margin-top: 100px;">
-        <div class="container" style="text-align: center;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to innovate?</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 40px;">Alaa Tegnology CO is open for high-end collaborations and technical consultations.</p>
-            <div class="glass-card" style="max-width: 600px; margin: 0 auto; text-align: left;">
-                <p><strong>Location:</strong> Sofia, Bulgaria</p>
-                <p><strong>Founder:</strong> Alaa Al-Hamdani</p>
-                <p><strong>Domain:</strong> mobilbg.eu</p>
-            </div>
-            <p style="margin-top: 60px; color: var(--text-secondary); font-size: 0.9rem;">
-                © 2026 Alaa Tegnology CO. All rights reserved. | 
-                <a href="privacy.html" style="color: var(--accent-blue); text-decoration: none;">Privacy Center (GDPR)</a>
+        <div class="container" style="margin-top: 60px; border-top: 1px solid var(--glass-border); padding-top: 20px; text-align: center;">
+            <p style="color: var(--text-secondary); font-size: 0.8rem;">
+                © 2026 Alaa Tegnology CO. All rights reserved. | <a href="privacy.html" style="color: var(--accent-blue);">Privacy (GDPR)</a>
             </p>
         </div>
     </footer>
@@ -108,29 +151,72 @@
     <!-- Cookie Consent Modal (GDPR) -->
     <div id="consent-modal" class="glass-card" style="position: fixed; bottom: 20px; left: 20px; right: 20px; z-index: 1000; display: none; padding: 20px; max-width: 500px;">
         <h3>We value your privacy</h3>
-        <p style="font-size: 0.9rem; margin: 10px 0;">We use cookies to enhance your experience, analyze site traffic, and for marketing purposes.</p>
+        <p style="font-size: 0.9rem; margin: 10px 0;">We use cookies to enhance your experience and analyze site traffic.</p>
         <div style="display: flex; gap: 10px; margin-top: 20px;">
             <button onclick="acceptAll()" class="glass-card" style="background: var(--accent-blue); color: white; border: none; padding: 10px 20px; cursor: pointer; flex: 1;">Accept All</button>
             <button onclick="acceptEssential()" class="glass-card" style="border: 1px solid var(--glass-border); padding: 10px 20px; cursor: pointer; flex: 1;">Essential Only</button>
         </div>
-        <p style="font-size: 0.8rem; margin-top: 10px; text-align: center;">
-            Read our <a href="privacy.html" style="color: var(--accent-blue);">Privacy Policy</a>
-        </p>
     </div>
 
     <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     <script src="firebase-config.js"></script>
 
     <script>
+        // Language Data
+        const translations = {
+            en: {
+                heroTitle: "Alaa Tegnology CO — Future Tech for Automotive & AI",
+                heroSubtitle: "Building Koli.one — the smart and integrated vehicle marketplace for Bulgaria and the region. Join our beta phase now.",
+                aboutTitle: "About the Founder",
+                aboutText: "Alaa Al-Hamdani — Software Engineer and Founder. Born on January 8, 1983. With 14 years of expertise in network distribution and programming in Baghdad, followed by professional excellence in Germany since 2020. Now established in Sofia, Bulgaria, merging two decades of experience into cutting-edge technology solutions.",
+                visionLabel: "Vision",
+                visionText: "Empowering the automotive market with AI and trusted digital products.",
+                missionLabel: "Mission",
+                missionText: "Building a transparent, secure, and easy-to-use platform for Bulgaria and beyond.",
+                servicesTitle: "Capabilities & Services",
+                whyTitle: "Why Alaa Tegnology?"
+            },
+            bg: {
+                heroTitle: "Alaa Tegnology CO — Бوдещи технологии за автомобили и AI",
+                heroSubtitle: "Изграждаме Koli.one — интелигентният и интегриран пазар за превозни средства за България и региона. Присъединете се към бета фазата сега.",
+                aboutTitle: "За основателя",
+                aboutText: "Алаа Ал-Хамдани — софтуерен инженер и основател. Роден на 8 януари 1983 г. С 14-годишен опит в разпространението на мрежи и програмирането в Багдад, последван от професионални постижения в Германия от 2020 г. Сега установен в София, България.",
+                visionLabel: "Визия",
+                visionText: "Овластяване на автомобилния пазар с AI и доверени дигитални продукти.",
+                missionLabel: "Мисия",
+                missionText: "Изграждане на прозрачна, сигурна и лесна за използване платформа за България и извън нея.",
+                servicesTitle: "Възможности и услуги",
+                whyTitle: "Защо Alaa Tegnology?"
+            }
+        };
+
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'bg' : 'en';
+            updateUI();
+        }
+
+        function updateUI() {
+            const t = translations[currentLang];
+            document.getElementById('hero-title').innerText = t.heroTitle;
+            document.getElementById('hero-subtitle').innerText = t.heroSubtitle;
+            document.getElementById('about-title').innerText = t.aboutTitle;
+            document.getElementById('about-text').innerText = t.aboutText;
+            document.getElementById('vision-label').innerText = t.visionLabel;
+            document.getElementById('vision-text').innerText = t.visionText;
+            document.getElementById('mission-label').innerText = t.missionLabel;
+            document.getElementById('mission-text').innerText = t.missionText;
+            document.getElementById('services-title').innerText = t.servicesTitle;
+            document.getElementById('why-title').innerText = t.whyTitle;
+            document.documentElement.lang = currentLang;
+        }
+
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         const analytics = firebase.analytics();
-        const db = firebase.firestore();
-
-        console.log("Firebase Initialized for Alaa Tegnology CO");
 
         // Track Page View
         analytics.logEvent('page_view', { page_title: 'Home' });
@@ -155,14 +241,12 @@
             document.getElementById('consent-modal').style.display = 'none';
             analytics.setAnalyticsCollectionEnabled(true);
             analytics.logEvent('consent_given', { type: 'all' });
-            console.log("All cookies accepted & Analytics enabled");
         }
 
         function acceptEssential() {
             localStorage.setItem('cookie-consent', 'essential');
             document.getElementById('consent-modal').style.display = 'none';
             analytics.setAnalyticsCollectionEnabled(false);
-            console.log("Essential cookies only & Analytics disabled");
         }
     </script>
 </body>
