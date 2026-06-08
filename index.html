@@ -3,290 +3,708 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alaa Tegnology CO | Technological Innovation & Integration</title>
-    <meta name="description" content="Alaa Tegnology CO — Building integrated digital ecosystems including Koli.one and globul.net. Expert solutions in AI, Web, and Cloud integration.">
+    <title>Alaa Tegnology CO | Roots of Technology — Innovation & Digital Integration</title>
+    <meta name="description" content="Alaa Tegnology CO — Where technology takes root. Building integrated digital ecosystems through Code, Electronics, AI, and Cloud solutions. Explore Koli.one and globul.net.">
     <link rel="canonical" href="https://mobilbg.eu/">
-    
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Alaa Tegnology CO | Tech Integration">
-    <meta property="og:description" content="Architecting the future through digital ecosystems. Explore Koli.one and globul.net.">
+    <meta property="og:title" content="Alaa Tegnology CO | Roots of Technology">
+    <meta property="og:description" content="Where technology takes root. Architecting the future through digital ecosystems.">
     <meta property="og:image" content="assets/branding/Copilot_20260410_024126.png">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="main.css">
-    <style>
-        .lang-toggle {
-            cursor: pointer;
-            padding: 5px 10px;
-            border: 1px solid var(--glass-border);
-            border-radius: 5px;
-            background: var(--glass-bg);
-            color: var(--text-primary);
-        }
-        section { padding: 80px 0; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
-        .service-card { padding: 30px; }
-        .service-card h3 { color: var(--accent-blue); margin-bottom: 15px; }
-    </style>
 </head>
 <body>
-    <div class="grid-bg"></div>
+    <!-- ======== BACKGROUND LAYERS ======== -->
+    <div class="roots-bg"></div>
+    <div class="circuit-grid"></div>
+    <div class="mouse-glow"></div>
+    <div class="neural-particles" id="particles"></div>
 
-    <nav class="container" style="padding: 20px 0; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;">
-        <div class="logo" style="display: flex; align-items: center; gap: 15px;">
-            <img src="assets/branding/logo512.png" alt="Alaa Tegnology CO Logo" style="height: 50px; border-radius: 8px;">
-            <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800;">ALAA <span style="color: var(--accent-blue);">TEGNOLOGY</span> CO</span>
-        </div>
-        <div style="display: flex; gap: 20px; align-items: center;">
-            <button class="lang-toggle" onclick="toggleLanguage()">Language: EN / BG / AR / DE</button>
-            <a href="beta.html" id="nav-cta" class="glass-card" style="padding: 10px 20px; text-decoration: none; background: var(--accent-blue); color: white; font-weight: 600; font-size: 0.9rem;">Get Early Access</a>
+    <!-- ======== SVG ROOT VEIN SYSTEM (Full Page) ======== -->
+    <svg class="roots-canvas" id="rootsCanvas" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <defs>
+            <radialGradient id="nodeGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#2dd4bf" stop-opacity="1"/>
+                <stop offset="100%" stop-color="#14b8a6" stop-opacity="0.3"/>
+            </radialGradient>
+            <filter id="veinGlow">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+            <linearGradient id="veinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.8"/>
+                <stop offset="50%" stop-color="#0d8a96" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#063d4f" stop-opacity="0.2"/>
+            </linearGradient>
+        </defs>
+        <!-- Veins drawn dynamically by JS -->
+    </svg>
+
+    <!-- ======== NAVIGATION ======== -->
+    <nav class="main-nav" id="mainNav">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo">
+                <img src="assets/branding/logo512.png" alt="Alaa Tegnology CO Logo">
+                <span class="nav-logo-text">ALAA <span class="highlight">TEGNOLOGY</span> CO</span>
+            </a>
+            <div class="nav-actions">
+                <button class="lang-toggle" onclick="toggleLanguage()" id="langBtn">🌐 EN</button>
+                <a href="beta.html" id="nav-cta" class="nav-cta">Get Early Access →</a>
+            </div>
         </div>
     </nav>
 
-    <header class="hero container">
-        <div class="glass-card" style="padding: 60px; text-align: center; background-image: url('assets/branding/Copilot_20260409_030233.png'); background-size: cover; background-position: center; position: relative;">
-            <div style="background: rgba(0,0,0,0.7); padding: 40px; border-radius: 20px;">
-                <h1 id="hero-title">Alaa Tegnology CO — Technological Innovation & Digital Integration</h1>
-                <p id="hero-subtitle" style="margin-top: 20px; font-size: 1.2rem; color: var(--text-secondary);">We build integrated digital ecosystems. From our flagship vehicle marketplace Koli.one to our global e-commerce platform globul.net. Future-ready tech, built today.</p>
-                <div style="margin-top: 40px;">
-                    <a href="#about" id="hero-cta" class="glass-card" style="padding: 15px 40px; text-decoration: none; background: var(--accent-blue); color: white; font-weight: 700; font-size: 1.1rem; box-shadow: 0 0 20px var(--accent-glow);">Explore Our Work</a>
-                </div>
-            </div>
+    <!-- ======== HERO SECTION ======== -->
+    <header class="hero container" id="hero">
+        <!-- Founder Ghost Silhouette — The Architect behind the roots -->
+        <div class="founder-ghost" id="founderGhost">
+            <img src="assets/branding/founder-hero.png" alt="" aria-hidden="true">
         </div>
+
+        <div class="hero-badge">
+            <span class="dot"></span>
+            <span id="hero-badge-text">Rooted in Innovation • Growing the Future</span>
+        </div>
+
+        <h1 id="hero-title">Where Technology<br>Takes Root</h1>
+
+        <p class="hero-subtitle" id="hero-subtitle">
+            From deep roots in code and electronics, through the veins of programming and cloud architecture, 
+            to the frontier of Artificial Intelligence — we build the digital nervous system of tomorrow.
+        </p>
+
+        <div class="hero-cta-group">
+            <a href="#roots" id="hero-cta" class="btn-primary">
+                <span>Explore Our Roots</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+            </a>
+            <a href="#about" class="btn-secondary" id="hero-cta-2">
+                <span>Meet the Architect</span>
+            </a>
+        </div>
+
+        <div class="hero-vein-line"></div>
+
+        <!-- Floating code snippets around hero -->
+        <div class="code-rain" id="heroCodeRain"></div>
     </header>
 
-    <section id="about" class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-            <div>
-                <h2 id="about-title">The Tech Architect</h2>
-                <p id="about-text" style="margin-top: 20px; font-size: 1.1rem; color: var(--text-secondary);">
-                    Alaa Al-Hamdani — Software Engineer and Founder with 20 years of technical excellence. From Iraqi network infrastructure to German high-end development, now headquartered in Sofia, Alaa Tegnology CO crafts bespoke digital solutions, integrating AI, Web, and Mobile ecosystems for a connected world.
-                </p>
-                <div style="margin-top: 20px; font-size: 0.9rem; color: var(--accent-blue);">
-                    <p>Current Portfolios: <strong>globul.net</strong> | <strong>Koli.one</strong></p>
-                    <p>Under Construction: <strong>koli-one.com</strong> | <strong>koli-one.de</strong></p>
+    <!-- ======== ROOTS TECHNOLOGY TREE ======== -->
+    <section id="roots" class="roots-tree-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label"><span class="line"></span> THE ROOTS <span class="line"></span></div>
+                <h2 class="section-title" id="roots-title">One Root. Infinite Branches.</h2>
+                <p class="section-desc" id="roots-desc">Every great technology shares a common origin — then branches into endless possibilities. Our roots run deep.</p>
+            </div>
+
+            <!-- Interactive SVG Tree -->
+            <div class="roots-svg-container reveal">
+                <svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" id="rootTreeSvg">
+                    <defs>
+                        <filter id="treeGlow">
+                            <feGaussianBlur stdDeviation="4" result="blur"/>
+                            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                    </defs>
+
+                    <!-- Main trunk -->
+                    <path class="vein-path thick" d="M500,380 Q500,300 500,250" style="--path-length:130;" stroke-dasharray="130" stroke-dashoffset="130" filter="url(#treeGlow)"/>
+
+                    <!-- Primary branches -->
+                    <!-- Left: Electronics -->
+                    <path class="vein-path thick" d="M500,250 Q400,220 280,140" style="--path-length:300;animation-delay:0.5s;" stroke-dasharray="300" stroke-dashoffset="300" filter="url(#treeGlow)"/>
+                    <!-- Left-Center: Electricity -->
+                    <path class="vein-path" d="M500,250 Q440,200 360,120" style="--path-length:220;animation-delay:0.8s;" stroke-dasharray="220" stroke-dashoffset="220" filter="url(#treeGlow)"/>
+                    <!-- Center: Code -->
+                    <path class="vein-path thick" d="M500,250 Q500,180 500,80" style="--path-length:170;animation-delay:0.3s;" stroke-dasharray="170" stroke-dashoffset="170" filter="url(#treeGlow)"/>
+                    <!-- Right-Center: Programming -->
+                    <path class="vein-path" d="M500,250 Q560,200 640,120" style="--path-length:220;animation-delay:0.8s;" stroke-dasharray="220" stroke-dashoffset="220" filter="url(#treeGlow)"/>
+                    <!-- Right: AI -->
+                    <path class="vein-path thick" d="M500,250 Q600,220 720,140" style="--path-length:300;animation-delay:0.5s;" stroke-dasharray="300" stroke-dashoffset="300" filter="url(#treeGlow)"/>
+
+                    <!-- Secondary branches (thinner) -->
+                    <path class="vein-path thin" d="M280,140 Q240,110 180,80" style="--path-length:140;animation-delay:1.2s;" stroke-dasharray="140" stroke-dashoffset="140"/>
+                    <path class="vein-path thin" d="M280,140 Q260,100 220,50" style="--path-length:120;animation-delay:1.4s;" stroke-dasharray="120" stroke-dashoffset="120"/>
+                    <path class="vein-path thin" d="M360,120 Q340,80 310,40" style="--path-length:100;animation-delay:1.3s;" stroke-dasharray="100" stroke-dashoffset="100"/>
+                    <path class="vein-path thin" d="M500,80 Q470,40 440,10" style="--path-length:90;animation-delay:1.1s;" stroke-dasharray="90" stroke-dashoffset="90"/>
+                    <path class="vein-path thin" d="M500,80 Q530,40 560,10" style="--path-length:90;animation-delay:1.1s;" stroke-dasharray="90" stroke-dashoffset="90"/>
+                    <path class="vein-path thin" d="M640,120 Q660,80 690,40" style="--path-length:100;animation-delay:1.3s;" stroke-dasharray="100" stroke-dashoffset="100"/>
+                    <path class="vein-path thin" d="M720,140 Q740,100 780,50" style="--path-length:120;animation-delay:1.4s;" stroke-dasharray="120" stroke-dashoffset="120"/>
+                    <path class="vein-path thin" d="M720,140 Q760,110 820,80" style="--path-length:140;animation-delay:1.2s;" stroke-dasharray="140" stroke-dashoffset="140"/>
+
+                    <!-- Tertiary micro-branches -->
+                    <path class="vein-path thin" d="M180,80 Q150,60 120,50" style="--path-length:70;animation-delay:1.8s;" stroke-dasharray="70" stroke-dashoffset="70"/>
+                    <path class="vein-path thin" d="M820,80 Q850,60 880,50" style="--path-length:70;animation-delay:1.8s;" stroke-dasharray="70" stroke-dashoffset="70"/>
+                    <path class="vein-path thin" d="M440,10 Q420,0 400,5" style="--path-length:50;animation-delay:2s;" stroke-dasharray="50" stroke-dashoffset="50"/>
+                    <path class="vein-path thin" d="M560,10 Q580,0 600,5" style="--path-length:50;animation-delay:2s;" stroke-dasharray="50" stroke-dashoffset="50"/>
+
+                    <!-- Nodes (junction points) -->
+                    <circle class="vein-node" cx="500" cy="380" r="5" style="animation-delay:0s;"/>
+                    <circle class="vein-node" cx="500" cy="250" r="6" style="animation-delay:0.3s;"/>
+                    <circle class="vein-node" cx="280" cy="140" r="4" style="animation-delay:1s;"/>
+                    <circle class="vein-node" cx="360" cy="120" r="3" style="animation-delay:1.1s;"/>
+                    <circle class="vein-node" cx="500" cy="80" r="5" style="animation-delay:0.8s;"/>
+                    <circle class="vein-node" cx="640" cy="120" r="3" style="animation-delay:1.1s;"/>
+                    <circle class="vein-node" cx="720" cy="140" r="4" style="animation-delay:1s;"/>
+
+                    <!-- Terminal nodes (leaf tips) -->
+                    <circle class="vein-node" cx="180" cy="80" r="3" style="animation-delay:1.5s;"/>
+                    <circle class="vein-node" cx="220" cy="50" r="2" style="animation-delay:1.6s;"/>
+                    <circle class="vein-node" cx="310" cy="40" r="2" style="animation-delay:1.6s;"/>
+                    <circle class="vein-node" cx="440" cy="10" r="2" style="animation-delay:1.7s;"/>
+                    <circle class="vein-node" cx="560" cy="10" r="2" style="animation-delay:1.7s;"/>
+                    <circle class="vein-node" cx="690" cy="40" r="2" style="animation-delay:1.6s;"/>
+                    <circle class="vein-node" cx="780" cy="50" r="2" style="animation-delay:1.6s;"/>
+                    <circle class="vein-node" cx="820" cy="80" r="3" style="animation-delay:1.5s;"/>
+
+                    <!-- Energy pulses traveling along main branches -->
+                    <circle class="energy-pulse" r="3" fill="url(#nodeGrad)">
+                        <animateMotion dur="4s" repeatCount="indefinite" begin="1.5s">
+                            <mpath href="#trunk-path"/>
+                        </animateMotion>
+                    </circle>
+
+                    <!-- Labels at branch endpoints -->
+                    <text x="160" y="70" fill="#5eead4" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" text-anchor="middle" opacity="0.8">⚡ Electronics</text>
+                    <text x="300" y="30" fill="#22d3ee" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" text-anchor="middle" opacity="0.8">🔌 Electricity</text>
+                    <text x="500" y="25" fill="#2dd4bf" font-family="'Outfit', sans-serif" font-size="15" font-weight="800" text-anchor="middle" opacity="1">&lt;/&gt; Code</text>
+                    <text x="700" y="30" fill="#22d3ee" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" text-anchor="middle" opacity="0.8">💻 Programming</text>
+                    <text x="840" y="70" fill="#a78bfa" font-family="'Outfit', sans-serif" font-size="13" font-weight="700" text-anchor="middle" opacity="0.8">🧠 AI</text>
+
+                    <!-- Hidden path for motion animation -->
+                    <path id="trunk-path" d="M500,380 Q500,300 500,250 Q500,180 500,80" fill="none" stroke="none"/>
+                </svg>
+            </div>
+
+            <!-- Branch Cards -->
+            <div class="root-branches">
+                <div class="glass-card root-card reveal reveal-delay-1">
+                    <div class="root-icon circuit-icon">⚡</div>
+                    <h3>Electronics & Circuits</h3>
+                    <p>The fundamental root — hardware design, embedded systems, and circuit architecture that powers every digital device.</p>
                 </div>
-                <div class="feature-grid" style="grid-template-columns: 1fr 1fr; margin-top: 30px;">
-                    <div class="glass-card">
-                        <h4 id="vision-label">Vision</h4>
-                        <p id="vision-text" style="font-size: 0.9rem;">Harmonizing human experience through seamless technological integration.</p>
+
+                <div class="glass-card root-card reveal reveal-delay-2">
+                    <div class="root-icon bolt-icon">🔌</div>
+                    <h3>Electrical Engineering</h3>
+                    <p>Power systems, signal processing, and the electrical backbone that fuels the digital revolution.</p>
+                </div>
+
+                <div class="glass-card root-card reveal reveal-delay-1">
+                    <div class="root-icon code-icon">&lt;/&gt;</div>
+                    <h3>Code & Software</h3>
+                    <p>The language of machines — from low-level firmware to high-level cloud applications, code is the DNA of technology.</p>
+                </div>
+
+                <div class="glass-card root-card reveal reveal-delay-2">
+                    <div class="root-icon chip-icon">💻</div>
+                    <h3>Programming & Systems</h3>
+                    <p>Full-stack development, distributed systems, and the engineering discipline that turns ideas into products.</p>
+                </div>
+
+                <div class="glass-card root-card reveal reveal-delay-3">
+                    <div class="root-icon brain-icon">🧠</div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>The ultimate frontier — machine learning, neural networks, and intelligent systems that learn, adapt, and evolve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== ABOUT / THE ARCHITECT ======== -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <div class="section-label"><span class="line"></span> THE ARCHITECT</div>
+                    <h2 id="about-title">20 Years of Building the Future</h2>
+                    <p class="about-bio" id="about-text">
+                        Alaa Al-Hamdani — Software Engineer and Founder with 20 years of technical excellence. 
+                        From Iraqi network infrastructure to German high-end development, now headquartered in Sofia, 
+                        Bulgaria. Alaa Tegnology CO crafts bespoke digital solutions, integrating AI, Web, 
+                        and Mobile ecosystems for a connected world.
+                    </p>
+                    <div class="about-portfolios">
+                        <p>Current Portfolios: <strong>globul.net</strong> | <strong>Koli.one</strong></p>
+                        <p>Under Construction: <strong>koli-one.com</strong> | <strong>koli-one.de</strong></p>
                     </div>
-                    <div class="glass-card">
-                        <h4 id="mission-label">Mission</h4>
-                        <p id="mission-text" style="font-size: 0.9rem;">Architecting reliable, scalable, and secure digital platforms that transcend industries.</p>
+                    <div class="about-cards">
+                        <div class="glass-card about-card">
+                            <h4 id="vision-label">⊕ Vision</h4>
+                            <p id="vision-text">Harmonizing human experience through seamless technological integration.</p>
+                        </div>
+                        <div class="glass-card about-card">
+                            <h4 id="mission-label">◎ Mission</h4>
+                            <p id="mission-text">Architecting reliable, scalable, and secure digital platforms that transcend industries.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual reveal reveal-delay-2">
+                    <div class="founder-portrait-wrapper">
+                        <img src="assets/branding/founder-digital.png" alt="Alaa Al-Hamdani — Founder & Tech Architect" class="founder-portrait">
+                        <div class="portrait-vein-glow"></div>
+                        <div class="portrait-particles" id="portraitParticles"></div>
+                    </div>
+                    <div class="glass-card about-visual-overlay">
+                        <h3>The Architect</h3>
+                        <p>Where Human Vision Meets Digital Innovation</p>
                     </div>
                 </div>
             </div>
-            <div class="glass-card" style="text-align: center;">
-                <img src="assets/branding/Copilot_20260409_025916.png" alt="Tech Integration Visual" style="max-width: 100%; border-radius: 15px;">
-                <h3 style="margin-top: 20px;">Digital Ecosystems</h3>
-                <p style="color: var(--text-secondary);">Integrating Web, AI, and E-commerce</p>
+        </div>
+    </section>
+
+    <!-- ======== SERVICES / SOLUTIONS ======== -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label"><span class="line"></span> SOLUTIONS <span class="line"></span></div>
+                <h2 class="section-title" id="services-title">Ecosystems & Solutions</h2>
+                <p class="section-desc">End-to-end technology solutions, from silicon to cloud.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="glass-card service-card reveal reveal-delay-1">
+                    <span class="service-icon">🌐</span>
+                    <h3>Full-Stack Web</h3>
+                    <p>Developing robust, integrated web applications and scalable portals with modern frameworks and cloud-native architecture.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+
+                <div class="glass-card service-card reveal reveal-delay-2">
+                    <span class="service-icon">🛒</span>
+                    <h3>E-Commerce</h3>
+                    <p>Global shopping platforms like globul.net with integrated logistics, secure payments, and intelligent recommendation engines.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+
+                <div class="glass-card service-card reveal reveal-delay-3">
+                    <span class="service-icon">🤖</span>
+                    <h3>AI Integration</h3>
+                    <p>Smart search, prediction engines, computer vision, and data-driven insights powered by cutting-edge machine learning.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
+
+                <div class="glass-card service-card reveal reveal-delay-4">
+                    <span class="service-icon">☁️</span>
+                    <h3>Cloud & Security</h3>
+                    <p>Architecting secure, GDPR-compliant cloud infrastructures on Google Cloud and Firebase for global-scale deployment.</p>
+                    <a href="#" class="service-link">Learn more →</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="container" style="background: rgba(255,255,255,0.02); border-radius: 30px;">
-        <h2 style="text-align: center;" id="services-title">Ecosystems & Solutions</h2>
-        <div class="feature-grid">
-            <div class="glass-card service-card">
-                <h3>Full-Stack Web</h3>
-                <p>Developing robust, integrated web applications and scalable portals.</p>
-            </div>
-            <div class="glass-card service-card">
-                <h3>E-Commerce</h3>
-                <p>Global shopping platforms like globul.net with integrated logistics and payments.</p>
-            </div>
-            <div class="glass-card service-card">
-                <h3>AI Integration</h3>
-                <p>Smart search, prediction engines, and data-driven insights for all platforms.</p>
-            </div>
-            <div class="glass-card service-card">
-                <h3>Cloud & Security</h3>
-                <p>Architecting secure, GDPR-compliant cloud infrastructures for global scale.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="why-us" class="container">
-        <h2 style="text-align: center;" id="why-title">Why Alaa Tegnology?</h2>
-        <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);">
-            <div style="text-align: center;">
-                <h4 style="color: var(--neon-mint); font-size: 2rem;">20+</h4>
-                <p>Years of Engineering</p>
-            </div>
-            <div style="text-align: center;">
-                <h4 style="color: var(--accent-blue); font-size: 2rem;">AI-First</h4>
-                <p>Automotive Focus</p>
-            </div>
-            <div style="text-align: center;">
-                <h4 style="color: var(--accent-blue); font-size: 2rem;">Secure</h4>
-                <p>Privacy by Design</p>
+    <!-- ======== STATS ======== -->
+    <section class="stats-section" id="why-us">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal reveal-delay-1">
+                    <div class="stat-number" data-target="20" data-suffix="+">0</div>
+                    <div class="stat-label" id="stat-label-1">Years of Engineering</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <div class="stat-number" data-target="5" data-suffix="">0</div>
+                    <div class="stat-label" id="stat-label-2">Digital Ecosystems</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <div class="stat-number" id="stat-ai">AI-First</div>
+                    <div class="stat-label" id="stat-label-3">Innovation Focus</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-4">
+                    <div class="stat-number" id="stat-secure">Secure</div>
+                    <div class="stat-label" id="stat-label-4">Privacy by Design</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" style="padding: 80px 0; background: var(--bg-secondary);">
-        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
-            <div>
-                <h3 style="margin-bottom: 20px;">Alaa Tegnology CO</h3>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Sofia, Bulgaria<br>mobilbg.eu</p>
+    <!-- ======== FOOTER ======== -->
+    <footer class="main-footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Alaa Tegnology CO</h3>
+                    <p>Where technology takes root. Building integrated digital ecosystems from Sofia, Bulgaria — connecting code, electronics, and AI into seamless solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Ecosystem</h4>
+                    <ul>
+                        <li><a href="#">Koli.one</a></li>
+                        <li><a href="#">globul.net</a></li>
+                        <li><a href="#">koli-one.com</a></li>
+                        <li><a href="#">koli-one.de</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:contact@mobilbg.eu">contact@mobilbg.eu</a></li>
+                        <li><a href="#">Sofia, Bulgaria</a></li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h4 style="margin-bottom: 15px;">Legal</h4>
-                <ul style="list-style: none; font-size: 0.9rem;">
-                    <li><a href="privacy.html" style="color: var(--text-secondary); text-decoration: none;">Privacy Center</a></li>
-                    <li><a href="#" style="color: var(--text-secondary); text-decoration: none;">Terms of Service</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>© 2026 Alaa Tegnology CO. All rights reserved. | <a href="privacy.html">Privacy (GDPR)</a></p>
             </div>
-            <div>
-                <h4 style="margin-bottom: 15px;">Contact</h4>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">contact@mobilbg.eu</p>
-            </div>
-        </div>
-        <div class="container" style="margin-top: 60px; border-top: 1px solid var(--glass-border); padding-top: 20px; text-align: center;">
-            <p style="color: var(--text-secondary); font-size: 0.8rem;">
-                © 2026 Alaa Tegnology CO. All rights reserved. | <a href="privacy.html" style="color: var(--accent-blue);">Privacy (GDPR)</a>
-            </p>
         </div>
     </footer>
 
-    <!-- Cookie Consent Modal (GDPR) -->
-    <div id="consent-modal" class="glass-card" style="position: fixed; bottom: 20px; left: 20px; right: 20px; z-index: 1000; display: none; padding: 20px; max-width: 500px;">
-        <h3>We value your privacy</h3>
-        <p style="font-size: 0.9rem; margin: 10px 0;">We use cookies to enhance your experience and analyze site traffic.</p>
-        <div style="display: flex; gap: 10px; margin-top: 20px;">
-            <button onclick="acceptAll()" class="glass-card" style="background: var(--accent-blue); color: white; border: none; padding: 10px 20px; cursor: pointer; flex: 1;">Accept All</button>
-            <button onclick="acceptEssential()" class="glass-card" style="border: 1px solid var(--glass-border); padding: 10px 20px; cursor: pointer; flex: 1;">Essential Only</button>
+    <!-- ======== COOKIE CONSENT (GDPR) ======== -->
+    <div id="consent-modal" class="glass-card consent-modal">
+        <h3>🔒 We value your privacy</h3>
+        <p>We use essential cookies to power this experience and optional analytics to improve it.</p>
+        <div class="consent-buttons">
+            <button onclick="acceptAll()" class="consent-btn accept">Accept All</button>
+            <button onclick="acceptEssential()" class="consent-btn essential">Essential Only</button>
         </div>
     </div>
 
-    <!-- Firebase SDKs -->
+    <!-- ======== FIREBASE SDKs ======== -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
     <script src="firebase-config.js"></script>
 
     <script>
-        // Language Data
-        const translations = {
-            en: {
-                heroTitle: "Alaa Tegnology CO — Technological Innovation & Digital Integration",
-                heroSubtitle: "We build integrated digital ecosystems. From our flagship vehicle marketplace Koli.one to our global e-commerce platform globul.net. Future-ready tech, built today.",
-                aboutTitle: "The Tech Architect",
-                aboutText: "Alaa Al-Hamdani — Software Engineer and Founder with 20 years of technical excellence. From Iraqi network infrastructure to German high-end development, now headquartered in Sofia, Alaa Tegnology CO crafts bespoke digital solutions, integrating AI, Web, and Mobile ecosystems for a connected world.",
-                visionLabel: "Vision",
-                visionText: "Harmonizing human experience through seamless technological integration.",
-                missionLabel: "Mission",
-                missionText: "Architecting reliable, scalable, and secure digital platforms that transcend industries.",
-                servicesTitle: "Ecosystems & Solutions",
-                whyTitle: "The Alaa Tech Edge",
-                cta: "Explore Our Work"
-            },
-            bg: {
-                heroTitle: "Alaa Tegnology CO — Технологични иновации и дигитална интеграция",
-                heroSubtitle: "Изграждаме интегрирани дигитални екосистеми. От водещия ни пазар за автомобили Koli.one до глобалната платформа за пазаруване globul.net.",
-                aboutTitle: "Технологичният архитект",
-                aboutText: "Алаа Ал-Хамдани — софтуерен инженер и основател с 20-годишен опит. От иракската мрежова инфраструктура до висок клас немски разработки, днес Alaa Tegnology CO създава персонализирани дигитални решения.",
-                visionLabel: "Визия",
-                visionText: "Хармонизиране на човешкия опит чрез безпроблемна технологична интеграция.",
-                missionLabel: "Мисия",
-                missionText: "Архитектура на надеждни, мащабируеми и сигурни дигитални платформи.",
-                servicesTitle: "Екосистеми и решения",
-                whyTitle: "Технологичното предимство",
-                cta: "Разгледайте работата ни"
-            },
-            ar: {
-                heroTitle: "علاء تكنولوجيا - للابتكار التقني والتكامل الرقمي",
-                heroSubtitle: "نبني أنظمة رقمية متكاملة. من منصتنا الرائدة للسيارات Koli.one إلى منصة التسوق العالمية globul.net. تقنيات جاهزة للمستقبل، تُبنى اليوم.",
-                aboutTitle: "مهندس التكنولوجيا",
-                aboutText: "علاء الحمداني — مهندس برمجيات ومؤسس بخبرة تقنية تصل إلى 20 عاماً. من البنية التحتية للشبكات في العراق إلى التطوير المتطور في ألمانيا، يدمج علاء تكنولوجيا الحلول الرقمية، والويب، والموبايل لعالم متصل.",
-                visionLabel: "الرؤية",
-                visionText: "تحقيق الانسجام في التجربة الإنسانية من خلال التكامل التكنولوجي السلس.",
-                missionLabel: "المهمة",
-                missionText: "بناء منصات رقمية موثوقة وقابلة للتوسع تتجاوز حدود الصناعات المختلفة.",
-                servicesTitle: "الأنظمة والحلول",
-                whyTitle: "التفوق التقني",
-                cta: "استكشف أعمالنا"
-            },
-            de: {
-                heroTitle: "Alaa Tegnology CO — Technologische Innovation & Digitale Integration",
-                heroSubtitle: "Wir bauen integrierte digitale Ökosysteme. Von unserem Flaggschiff-Marktplatz Koli.one bis zu unserer globalen Shopping-Plattform globul.net.",
-                aboutTitle: "Der Tech-Architekt",
-                aboutText: "Alaa Al-Hamdani — Software-Ingenieur und Gründer mit 20 Jahren Erfahrung. Von der irakischen Netzwerkinfrastruktur bis zur deutschen High-End-Entwicklung entwickelt Alaa Tegnology CO maßgeschneiderte digitale Lösungen.",
-                visionLabel: "Vision",
-                visionText: "Harmonisierung der menschlichen Erfahrung durch nahtlose technologische Integration.",
-                missionLabel: "Mission",
-                missionText: "Architektur zuverlässiger, skalierbarer und sicherer digitaler Plattformen.",
-                servicesTitle: "Ökosysteme & Lösungen",
-                whyTitle: "Der Alaa Tech Vorteil",
-                cta: "Unsere Projekte"
+    // ============================================================
+    //  ALAA TEGNOLOGY CO — ROOTS OF TECHNOLOGY ENGINE
+    //  Neural Particles • Vein System • Code Rain • Interactions
+    // ============================================================
+
+    // ---- NEURAL PARTICLE SYSTEM ----
+    (function initParticles() {
+        const container = document.getElementById('particles');
+        const count = 40;
+        for (let i = 0; i < count; i++) {
+            const p = document.createElement('div');
+            p.classList.add('particle');
+            p.style.left = Math.random() * 100 + '%';
+            p.style.width = p.style.height = (1.5 + Math.random() * 3) + 'px';
+            p.style.animationDuration = (8 + Math.random() * 16) + 's';
+            p.style.animationDelay = (Math.random() * 12) + 's';
+            container.appendChild(p);
+        }
+    })();
+
+    // ---- INTERACTIVE MOUSE GLOW ----
+    document.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth) * 100;
+        const y = (e.clientY / window.innerHeight) * 100;
+        document.documentElement.style.setProperty('--mouse-x', x + '%');
+        document.documentElement.style.setProperty('--mouse-y', y + '%');
+    });
+
+    // ---- NAVIGATION SCROLL EFFECT ----
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 80) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+
+    // ---- SCROLL REVEAL ----
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
             }
-        };
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-        const langOrder = ['en', 'bg', 'ar', 'de'];
-        let currentLangIdx = 0;
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-        function toggleLanguage() {
-            currentLangIdx = (currentLangIdx + 1) % langOrder.length;
-            updateUI();
+    // ---- ANIMATED STAT COUNTERS ----
+    const statObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = parseInt(el.dataset.target);
+                const suffix = el.dataset.suffix || '';
+                if (isNaN(target)) return;
+                let current = 0;
+                const step = Math.ceil(target / 40);
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    el.textContent = current + suffix;
+                }, 40);
+                statObserver.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-number[data-target]').forEach(el => statObserver.observe(el));
+
+    // ---- CODE RAIN EFFECT ----
+    (function initCodeRain() {
+        const container = document.getElementById('heroCodeRain');
+        const snippets = [
+            'const ai = new NeuralNetwork();',
+            'function deploy() { }',
+            'import { Cloud } from "gcp";',
+            '<div class="root">',
+            'git push origin main',
+            'docker compose up -d',
+            'SELECT * FROM tech',
+            'npm run build',
+            'firebase deploy',
+            'export default App;',
+            'async function init()',
+            'return await fetch(api);',
+            'let voltage = 220;',
+            'class Circuit extends PCB',
+            'model.fit(data, labels)',
+            'tf.keras.Sequential()',
+            '0x3F 0xA1 0xB7 0xC2',
+            'while (learning) { grow(); }',
+            'const roots = tree.branch();',
+            'signal.process(frequency);',
+        ];
+        const cols = 18;
+        for (let i = 0; i < cols; i++) {
+            const col = document.createElement('div');
+            col.classList.add('code-column');
+            col.style.left = (i / cols * 100) + '%';
+            col.style.animationDuration = (10 + Math.random() * 20) + 's';
+            col.style.animationDelay = (Math.random() * 15) + 's';
+            col.style.fontSize = (10 + Math.random() * 6) + 'px';
+            col.textContent = snippets[Math.floor(Math.random() * snippets.length)];
+            container.appendChild(col);
+        }
+    })();
+
+    // ---- FULL-PAGE SVG VEIN SYSTEM ----
+    (function initFullPageVeins() {
+        const svg = document.getElementById('rootsCanvas');
+        const w = window.innerWidth;
+        const h = window.innerHeight * 3; // Span multiple viewports
+        svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+
+        function createVein(d, strokeWidth, opacity, delay) {
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', d);
+            path.setAttribute('fill', 'none');
+            path.setAttribute('stroke', 'url(#veinGrad)');
+            path.setAttribute('stroke-width', strokeWidth);
+            path.setAttribute('stroke-linecap', 'round');
+            path.setAttribute('opacity', opacity);
+            const length = path.getTotalLength ? path.getTotalLength() : 500;
+            path.style.strokeDasharray = length;
+            path.style.strokeDashoffset = length;
+            path.style.setProperty('--path-length', length);
+            path.style.animation = `drawVein ${2 + Math.random() * 2}s ease ${delay}s forwards`;
+            svg.appendChild(path);
         }
 
-        function updateUI() {
-            const lang = langOrder[currentLangIdx];
-            const t = translations[lang];
-            document.getElementById('hero-title').innerText = t.heroTitle;
-            document.getElementById('hero-subtitle').innerText = t.heroSubtitle;
-            document.getElementById('about-title').innerText = t.aboutTitle;
-            document.getElementById('about-text').innerText = t.aboutText;
-            document.getElementById('vision-label').innerText = t.visionLabel;
-            document.getElementById('vision-text').innerText = t.visionText;
-            document.getElementById('mission-label').innerText = t.missionLabel;
-            document.getElementById('mission-text').innerText = t.missionText;
-            document.getElementById('services-title').innerText = t.servicesTitle;
-            document.getElementById('why-title').innerText = t.whyTitle;
-            document.getElementById('nav-cta').innerText = t.cta;
-            document.getElementById('hero-cta').innerText = t.cta;
-            document.documentElement.lang = lang;
-            document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
-        }
+        // Central main artery
+        const cx = w / 2;
+        createVein(`M${cx},${h * 0.02} Q${cx},${h * 0.15} ${cx},${h * 0.3}`, 3, 0.5, 0);
 
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const analytics = firebase.analytics();
+        // Major branches from center
+        const branches = [
+            { end: [w * 0.15, h * 0.5], cp: [w * 0.35, h * 0.35] },
+            { end: [w * 0.3, h * 0.55], cp: [w * 0.4, h * 0.4] },
+            { end: [w * 0.7, h * 0.55], cp: [w * 0.6, h * 0.4] },
+            { end: [w * 0.85, h * 0.5], cp: [w * 0.65, h * 0.35] },
+            { end: [w * 0.1, h * 0.7], cp: [w * 0.3, h * 0.55] },
+            { end: [w * 0.9, h * 0.7], cp: [w * 0.7, h * 0.55] },
+        ];
 
-        // Track Page View
-        analytics.logEvent('page_view', { page_title: 'Home' });
-
-        // Interactive mouse movement for the background glow
-        document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth) * 100;
-            const y = (e.clientY / window.innerHeight) * 100;
-            document.documentElement.style.setProperty('--mouse-x', `${x}%`);
-            document.documentElement.style.setProperty('--mouse-y', `${y}%`);
+        branches.forEach((b, i) => {
+            createVein(
+                `M${cx},${h * 0.3} Q${b.cp[0]},${b.cp[1]} ${b.end[0]},${b.end[1]}`,
+                1.5 + Math.random(), 0.3, 0.5 + i * 0.3
+            );
         });
 
-        // Cookie Consent Logic
-        window.onload = () => {
-            if (!localStorage.getItem('cookie-consent')) {
-                document.getElementById('consent-modal').style.display = 'block';
+        // Sub-branches
+        branches.forEach((b, i) => {
+            for (let j = 0; j < 2; j++) {
+                const endX = b.end[0] + (Math.random() - 0.5) * w * 0.2;
+                const endY = b.end[1] + Math.random() * h * 0.15;
+                const cpX = b.end[0] + (endX - b.end[0]) * 0.5;
+                const cpY = b.end[1] + (endY - b.end[1]) * 0.3;
+                createVein(
+                    `M${b.end[0]},${b.end[1]} Q${cpX},${cpY} ${endX},${endY}`,
+                    0.8 + Math.random() * 0.5, 0.15, 1.5 + i * 0.2 + j * 0.1
+                );
             }
-        };
+        });
 
-        function acceptAll() {
-            localStorage.setItem('cookie-consent', 'all');
-            document.getElementById('consent-modal').style.display = 'none';
-            analytics.setAnalyticsCollectionEnabled(true);
-            analytics.logEvent('consent_given', { type: 'all' });
+        // Add floating vein nodes
+        for (let i = 0; i < 20; i++) {
+            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle.setAttribute('cx', Math.random() * w);
+            circle.setAttribute('cy', h * 0.1 + Math.random() * h * 0.6);
+            circle.setAttribute('r', 1.5 + Math.random() * 2);
+            circle.setAttribute('fill', '#14b8a6');
+            circle.setAttribute('opacity', 0.15 + Math.random() * 0.25);
+            circle.classList.add('vein-node');
+            circle.style.animationDelay = Math.random() * 4 + 's';
+            svg.appendChild(circle);
         }
+    })();
 
-        function acceptEssential() {
-            localStorage.setItem('cookie-consent', 'essential');
-            document.getElementById('consent-modal').style.display = 'none';
-            analytics.setAnalyticsCollectionEnabled(false);
+    // ---- LANGUAGE SYSTEM ----
+    const translations = {
+        en: {
+            heroTitle: "Where Technology<br>Takes Root",
+            heroSubtitle: "From deep roots in code and electronics, through the veins of programming and cloud architecture, to the frontier of Artificial Intelligence — we build the digital nervous system of tomorrow.",
+            heroBadge: "Rooted in Innovation • Growing the Future",
+            aboutTitle: "20 Years of Building the Future",
+            aboutText: "Alaa Al-Hamdani — Software Engineer and Founder with 20 years of technical excellence. From Iraqi network infrastructure to German high-end development, now headquartered in Sofia, Bulgaria. Alaa Tegnology CO crafts bespoke digital solutions, integrating AI, Web, and Mobile ecosystems for a connected world.",
+            visionLabel: "⊕ Vision",
+            visionText: "Harmonizing human experience through seamless technological integration.",
+            missionLabel: "◎ Mission",
+            missionText: "Architecting reliable, scalable, and secure digital platforms that transcend industries.",
+            rootsTitle: "One Root. Infinite Branches.",
+            rootsDesc: "Every great technology shares a common origin — then branches into endless possibilities. Our roots run deep.",
+            servicesTitle: "Ecosystems & Solutions",
+            cta: "Explore Our Roots",
+            langLabel: "🌐 EN"
+        },
+        bg: {
+            heroTitle: "Там, Където Технологията<br>Пуска Корени",
+            heroSubtitle: "От дълбоките корени в кода и електрониката, през вените на програмирането и облачната архитектура, до границата на Изкуствения интелект — ние изграждаме дигиталната нервна система на утрешния ден.",
+            heroBadge: "Вкоренени в иновациите • Отглеждаме бъдещето",
+            aboutTitle: "20 Години Строим Бъдещето",
+            aboutText: "Алаа Ал-Хамдани — софтуерен инженер и основател с 20-годишен опит. От иракската мрежова инфраструктура до висок клас немски разработки, днес Alaa Tegnology CO създава персонализирани дигитални решения.",
+            visionLabel: "⊕ Визия",
+            visionText: "Хармонизиране на човешкия опит чрез безпроблемна технологична интеграция.",
+            missionLabel: "◎ Мисия",
+            missionText: "Архитектура на надеждни, мащабируеми и сигурни дигитални платформи.",
+            rootsTitle: "Един Корен. Безкрайни Клонове.",
+            rootsDesc: "Всяка велика технология споделя общ произход — след което се разклонява в безкрайни възможности.",
+            servicesTitle: "Екосистеми и Решения",
+            cta: "Разгледайте Корените Ни",
+            langLabel: "🌐 BG"
+        },
+        ar: {
+            heroTitle: "حيث التكنولوجيا<br>تضرب جذورها",
+            heroSubtitle: "من جذور عميقة في الكود والإلكترونيات، عبر شرايين البرمجة والبنية السحابية، إلى آفاق الذكاء الاصطناعي — نبني الجهاز العصبي الرقمي للغد.",
+            heroBadge: "متجذرون في الابتكار • ننمّي المستقبل",
+            aboutTitle: "٢٠ عاماً من بناء المستقبل",
+            aboutText: "علاء الحمداني — مهندس برمجيات ومؤسس بخبرة تقنية تصل إلى 20 عاماً. من البنية التحتية للشبكات في العراق إلى التطوير المتطور في ألمانيا، يدمج علاء تكنولوجيا الحلول الرقمية، والويب، والموبايل لعالم متصل.",
+            visionLabel: "⊕ الرؤية",
+            visionText: "تحقيق الانسجام في التجربة الإنسانية من خلال التكامل التكنولوجي السلس.",
+            missionLabel: "◎ المهمة",
+            missionText: "بناء منصات رقمية موثوقة وقابلة للتوسع تتجاوز حدود الصناعات المختلفة.",
+            rootsTitle: "جذر واحد. فروع لا نهائية.",
+            rootsDesc: "كل تقنية عظيمة تشترك في أصل واحد — ثم تتفرع إلى إمكانيات لا حدود لها.",
+            servicesTitle: "الأنظمة والحلول",
+            cta: "استكشف جذورنا",
+            langLabel: "🌐 AR"
+        },
+        de: {
+            heroTitle: "Wo Technologie<br>Wurzeln Schlägt",
+            heroSubtitle: "Von tiefen Wurzeln in Code und Elektronik, durch die Adern der Programmierung und Cloud-Architektur, bis zur Grenze der Künstlichen Intelligenz — wir bauen das digitale Nervensystem von morgen.",
+            heroBadge: "Verwurzelt in Innovation • Die Zukunft Wachsen Lassen",
+            aboutTitle: "20 Jahre Zukunft Bauen",
+            aboutText: "Alaa Al-Hamdani — Software-Ingenieur und Gründer mit 20 Jahren Erfahrung. Von der irakischen Netzwerkinfrastruktur bis zur deutschen High-End-Entwicklung entwickelt Alaa Tegnology CO maßgeschneiderte digitale Lösungen.",
+            visionLabel: "⊕ Vision",
+            visionText: "Harmonisierung der menschlichen Erfahrung durch nahtlose technologische Integration.",
+            missionLabel: "◎ Mission",
+            missionText: "Architektur zuverlässiger, skalierbarer und sicherer digitaler Plattformen.",
+            rootsTitle: "Eine Wurzel. Unendliche Zweige.",
+            rootsDesc: "Jede große Technologie teilt einen gemeinsamen Ursprung — und verzweigt sich dann in endlose Möglichkeiten.",
+            servicesTitle: "Ökosysteme & Lösungen",
+            cta: "Unsere Wurzeln Entdecken",
+            langLabel: "🌐 DE"
         }
+    };
+
+    const langOrder = ['en', 'bg', 'ar', 'de'];
+    let currentLangIdx = 0;
+
+    function toggleLanguage() {
+        currentLangIdx = (currentLangIdx + 1) % langOrder.length;
+        updateUI();
+    }
+
+    function updateUI() {
+        const lang = langOrder[currentLangIdx];
+        const t = translations[lang];
+
+        document.getElementById('hero-title').innerHTML = t.heroTitle;
+        document.getElementById('hero-subtitle').textContent = t.heroSubtitle;
+        document.getElementById('hero-badge-text').textContent = t.heroBadge;
+        document.getElementById('about-title').textContent = t.aboutTitle;
+        document.getElementById('about-text').textContent = t.aboutText;
+        document.getElementById('vision-label').textContent = t.visionLabel;
+        document.getElementById('vision-text').textContent = t.visionText;
+        document.getElementById('mission-label').textContent = t.missionLabel;
+        document.getElementById('mission-text').textContent = t.missionText;
+        document.getElementById('roots-title').textContent = t.rootsTitle;
+        document.getElementById('roots-desc').textContent = t.rootsDesc;
+        document.getElementById('services-title').textContent = t.servicesTitle;
+        document.getElementById('nav-cta').textContent = t.cta + ' →';
+        document.getElementById('hero-cta').querySelector('span').textContent = t.cta;
+        document.getElementById('langBtn').textContent = t.langLabel;
+
+        document.documentElement.lang = lang;
+        document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    }
+
+    // ---- FIREBASE INIT ----
+    firebase.initializeApp(firebaseConfig);
+    const analytics = firebase.analytics();
+    analytics.logEvent('page_view', { page_title: 'Home — Roots of Technology' });
+
+    // ---- COOKIE CONSENT ----
+    window.addEventListener('DOMContentLoaded', () => {
+        if (!localStorage.getItem('cookie-consent')) {
+            document.getElementById('consent-modal').style.display = 'block';
+        }
+    });
+
+    function acceptAll() {
+        localStorage.setItem('cookie-consent', 'all');
+        document.getElementById('consent-modal').style.display = 'none';
+        analytics.setAnalyticsCollectionEnabled(true);
+        analytics.logEvent('consent_given', { type: 'all' });
+    }
+
+    function acceptEssential() {
+        localStorage.setItem('cookie-consent', 'essential');
+        document.getElementById('consent-modal').style.display = 'none';
+        analytics.setAnalyticsCollectionEnabled(false);
+    }
+
+    // ---- SMOOTH SCROLL FOR ANCHOR LINKS ----
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', (e) => {
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
     </script>
 </body>
 </html>
